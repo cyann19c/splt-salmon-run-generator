@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>喷喷打工借口生成器</title>
+  <style>
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background-color: #fdf6f6;
+      text-align: center;
+      margin-top: 60px;
+    }
+    h1 {
+      color: #e67e22;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .text-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 200px;
+      padding: 10px;
+      font-size: 1em;
+      text-align: center;
+      border: 2px solid #ffa07a;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #generate {
+      background-color: #ffb347;
+      color: white;
+    }
+    #copy {
+      background-color: #6cc070;
+      color: white;
+    }
+    #history {
+      width: 80%;
+      height: 120px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      resize: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>喷喷打工借口生成器</h1>
+
+  <div class="text-boxes">
+    <input id="subject" readonly />
+    <input id="predicate" readonly />
+  </div>
+
+  <button id="generate">生成</button>
+  <button id="copy">复制全部</button>
+
+  <textarea id="history" readonly placeholder="生成的借口将出现在这里..."></textarea>
+
+  <script>
+    const subjects = [
+      "打工","野人","熊老板","地图","大招","武器","环境","大鲑鱼","小鲑鱼",
+      "垃圾桶","陀螺仪","视角","走位","这次身法","默契度","游泳圈","三角雷",
+      "烤架鱼","光蝇","网络","加速器","任天堂"
+    ];
+
+    const predicates = [
+      "在干嘛","没吃饭吗","太烂了","实在不行","不合适","好差劲","不理解","有问题",
+      "太糟了","全否定","没什么好说的","我讨厌你","特较真儿","一直在挑战我",
+      "好雷人","没有被邀请","没有出现的义务","不对劲","搞啥呢","咋这样",
+      "我不同意","真是不懂了","太安卓了","帮倒忙呢","没发力啊","真下饭","不中啊"
+    ];
+
+    const subjectBox = document.getElementById("subject");
+    const predicateBox = document.getElementById("predicate");
+    const historyBox = document.getElementById("history");
+    const generateBtn = document.getElementById("generate");
+    const copyBtn = document.getElementById("copy");
+
+    generateBtn.addEventListener("click", () => {
+      const s = subjects[Math.floor(Math.random() * subjects.length)];
+      const p = predicates[Math.floor(Math.random() * predicates.length)];
+      subjectBox.value = s;
+      predicateBox.value = p;
+
+      if (historyBox.value === "") {
+        historyBox.value = s + p;
+      } else {
+        historyBox.value += "，" + s + p;
+      }
+    });
+
+    copyBtn.addEventListener("click", () => {
+      historyBox.select();
+      document.execCommand("copy");
+      alert("已复制！");
+    });
+  </script>
+</body>
+</html>
