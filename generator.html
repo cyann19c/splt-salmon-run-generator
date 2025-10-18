@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;<b>喷喷打工借口生成器</b>&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0f1724;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card:#0b1220;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#6ee7b7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#9aa4b2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--glass: rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Inter, "Helvetica Neue", Arial, "PingFang SC", "<b>苹方</b>", "Microsoft YaHei", sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height:100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(180deg,#071024 0%, #08142a 60%, #051019 100%);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #e6eef6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>-webkit-font-smoothing:antialiased;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>-moz-osx-font-smoothing:grayscale;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width:920px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 8px 30px rgba(2,6,23,0.6);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:22px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing:0.2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sub{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.generator{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--card);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex:1 1 220px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width:180px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.big-row{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.phrase{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex:1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.display{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height:72px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--glass);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>word-break:break-word;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>user-select:text;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.controls{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction:column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:flex-end;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>button{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>outline:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:10px 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(90deg, rgba(110,231,183,0.12), rgba(110,231,183,0.06));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width:100px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:transform .12s ease, box-shadow .12s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 6px 18px rgba(14,30,40,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:active{ transform:translateY(1px) }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-primary{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(90deg,#10b98110,#05966910);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #b6ffe9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(110,231,183,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-ghost{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px dashed rgba(255,255,255,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width:86px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.log-area{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap:wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>textarea#log{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex:1 1 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height:120px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>resize:vertical;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #e6eef6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(255,255,255,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:15px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hint{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top:6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* small responsive tweaks */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:640px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.big-row{flex-direction:column; align-items:stretch}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.controls{ flex-direction:row; justify-content:space-between; width:100% }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.display{ height:64px; font-size:18px }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>header{flex-direction:column; align-items:flex-start; gap:8px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap" role="application" aria-labelledby="title"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 id="title"&gt;<b>喷喷打工借口生成器</b>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub"&gt;<b>随机生成短语</b> —— <b>左：主语</b> <b>·</b> <b>右：动词</b>/<b>形容词</b> <b>·</b> <b>点击“生成”追加到记录区</b>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="sub"&gt;<b>作者：粥粥</b> <b>的专属小玩具</b> <b>·</b> <b>已内置词库</b>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="generator" aria-label="<b>生成器</b>"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="phrase"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box" aria-hidden="false"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="font-size:12px;color:var(--muted);margin-bottom:8px"&gt;<b>主语</b>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="leftDisplay" class="display" role="status" aria-live="polite"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="box" aria-hidden="false"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="font-size:12px;color:var(--muted);margin-bottom:8px"&gt;<b>动词</b> / <b>形容词</b>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="rightDisplay" class="display" role="status" aria-live="polite"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="controls" aria-hidden="false"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="generateBtn" class="btn-primary" title="<b>随机生成一个词组</b>"&gt;<b>生成</b>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="surpriseBtn" class="btn-ghost" title="<b>随机填入并同时追加（同生成功能）</b>"&gt;<b>马上喷</b>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="log-area" aria-label="<b>记录区</b>"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="log" placeholder="<b>每次生成的词组会按顺序以逗号分隔显示在这里。可编辑，也可以复制使用。</b>"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;flex-direction:column;gap:8px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="copyBtn" title="<b>复制记录内容</b>"&gt;<b>一键复制</b>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="clearBtn" class="btn-ghost" title="<b>清空记录</b>"&gt;<b>清空记录</b>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hint"&gt;<b>提示：想改词库可在脚本里修改</b> &lt;code&gt;leftWords&lt;/code&gt; <b>和</b> &lt;code&gt;rightWords&lt;/code&gt; <b>两个数组。</b>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// —— <b>词库（已由粥粥提供）</b> —— //</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const leftWords = <b>[</b></p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>打工</b>","<b>野人</b>","<b>熊老板</b>","<b>地图</b>","<b>大招</b>","<b>武器</b>","<b>环境</b>","<b>大鲑鱼</b>","<b>小鲑鱼</b>",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>垃圾桶</b>","<b>陀螺仪</b>","<b>视角</b>","<b>走位</b>","<b>这次身法</b>","<b>默契度</b>","<b>游泳圈</b>","<b>三角雷</b>",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>烤架鱼</b>","<b>光蝇</b>","<b>网络</b>","<b>加速器</b>","<b>任天堂</b>"</p>
+<p class="p1"><span class="Apple-converted-space">    </span><b>]</b>;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rightWords = <b>[</b></p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>在干嘛</b>","<b>没吃饭吗</b>","<b>太烂了</b>","<b>实在不行</b>","<b>不合适</b>","<b>好差劲</b>","<b>不理解</b>","<b>有问题</b>",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>太糟了</b>","<b>全否定</b>","<b>没什么好说的</b>","<b>我讨厌你</b>","<b>特较真儿</b>","<b>一直在挑战我</b>","<b>好雷人</b>",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>没有被邀请</b>","<b>没有出现的义务</b>","<b>不对劲</b>","<b>搞啥呢</b>","<b>咋这样</b>","<b>我不同意</b>","<b>真是不懂了</b>",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"<b>太安卓了</b>","<b>帮倒忙呢</b>","<b>没发力啊</b>","<b>真下饭</b>","<b>不中啊</b>"</p>
+<p class="p1"><span class="Apple-converted-space">    </span><b>]</b>;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// DOM</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const leftDisplay = document.getElementById('leftDisplay');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rightDisplay = document.getElementById('rightDisplay');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const generateBtn = document.getElementById('generateBtn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const surpriseBtn = document.getElementById('surpriseBtn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const logArea = document.getElementById('log');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const copyBtn = document.getElementById('copyBtn');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const clearBtn = document.getElementById('clearBtn');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>记录数组，保证格式化输出</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const history = <b>[]</b>;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>随机工具</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function randItem(arr){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return arr<b>[</b>Math.floor(Math.random()*arr.length)<b>]</b>;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>生成一次（并追加到记录）</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function generateOnce({appendLog=true} = {}){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const l = randItem(leftWords);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const r = randItem(rightWords);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>leftDisplay.textContent = l;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>rightDisplay.textContent = r;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(appendLog){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>history.push(l + r);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>logArea.value = history.join('<b>，</b>'); // <b>使用中文逗号，保持示例一致</b></p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>事件绑定</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>generateBtn.addEventListener('click', () =&gt; generateOnce({appendLog:true}));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>surpriseBtn.addEventListener('click', () =&gt; generateOnce({appendLog:true}));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>复制功能（使用</b> Clipboard API<b>）</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>copyBtn.addEventListener('click', async () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const text = logArea.value;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(!text){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>copyBtn.textContent = '<b>没有内容可复制</b>';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(()=&gt; copyBtn.textContent = '<b>一键复制</b>', 1200);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>await navigator.clipboard.writeText(text);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>copyBtn.textContent = '<b>已复制</b> ✓';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(()=&gt; copyBtn.textContent = '<b>一键复制</b>', 1200);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// <b>退回到老式方法（兼容）</b></p>
+<p class="p1"><span class="Apple-converted-space">        </span>logArea.select();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.execCommand('copy');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>copyBtn.textContent = '<b>已复制</b> ✓';</p>
+<p class="p1"><span class="Apple-converted-space">          </span>setTimeout(()=&gt; copyBtn.textContent = '<b>一键复制</b>', 1200);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} catch (err) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>copyBtn.textContent = '<b>复制失败</b>';</p>
+<p class="p1"><span class="Apple-converted-space">          </span>setTimeout(()=&gt; copyBtn.textContent = '<b>一键复制</b>', 1200);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>清空记录（但保留当前显示）</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>clearBtn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>history.length = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>logArea.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>快速键：按空格生成（避免在输入框时触发）</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('keydown', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(e.code === 'Space' &amp;&amp; document.activeElement.tagName !== 'TEXTAREA' &amp;&amp; document.activeElement.tagName !== 'INPUT'){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>generateOnce({appendLog:true});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// <b>初始化：先随机一次但不追加（页面打开时给个预览）</b></p>
+<p class="p1"><span class="Apple-converted-space">    </span>generateOnce({appendLog:false});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
